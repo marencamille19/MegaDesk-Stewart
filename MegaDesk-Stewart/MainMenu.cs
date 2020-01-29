@@ -19,9 +19,28 @@ namespace MegaDesk_Stewart
 
         private void BtnAddNewForm_Click(object sender, EventArgs e)
         {
-            var addNewQuoteForm = new AddQuote();
+            var addNewQuoteForm = new AddQuote(this);
             addNewQuoteForm.Show();
             Hide();
+        }
+
+        private void BtnViewQuotes_Click(object sender, EventArgs e)
+        {
+            var viewQuotesForm = new ViewAllQuotes(this);
+            viewQuotesForm.Show();
+            Hide();
+        }
+
+        private void BtnSearchQuotes_Click(object sender, EventArgs e)
+        {
+            var searchQuotesForm = new SearchQuotes(this);
+            searchQuotesForm.Show();
+            Hide();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

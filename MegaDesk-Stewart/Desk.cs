@@ -10,11 +10,11 @@ namespace MegaDesk_Stewart
     {
         public enum DesktopMaterial
         {
-            Oak,
-            Laminate,
-            Pine,
-            Rosewood,
-            Veneer
+            Oak = 200,
+            Laminate = 100,
+            Pine = 50,
+            Rosewood = 300,
+            Veneer = 125
         }
 
         //prop + tab + tab creates a property like below

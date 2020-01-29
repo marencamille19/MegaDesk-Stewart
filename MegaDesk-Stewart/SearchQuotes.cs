@@ -12,9 +12,24 @@ namespace MegaDesk_Stewart
 {
     public partial class SearchQuotes : Form
     {
-        public SearchQuotes()
+        MainMenu mainMenu;
+        public SearchQuotes(MainMenu mainMenu)
         {
             InitializeComponent();
+            this.mainMenu = mainMenu;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.mainMenu.Show();
+            this.Close();
+        }
+
+        private void SearchQuotes_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.mainMenu.Show();
         }
     }
 }
+

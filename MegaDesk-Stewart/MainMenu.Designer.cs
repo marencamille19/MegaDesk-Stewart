@@ -55,6 +55,7 @@
             this.BtnViewQuotes.TabIndex = 1;
             this.BtnViewQuotes.Text = "View Quotes";
             this.BtnViewQuotes.UseVisualStyleBackColor = true;
+            this.BtnViewQuotes.Click += new System.EventHandler(this.BtnViewQuotes_Click);
             // 
             // BtnSearchQuotes
             // 
@@ -64,6 +65,7 @@
             this.BtnSearchQuotes.TabIndex = 2;
             this.BtnSearchQuotes.Text = "Search Quotes";
             this.BtnSearchQuotes.UseVisualStyleBackColor = true;
+            this.BtnSearchQuotes.Click += new System.EventHandler(this.BtnSearchQuotes_Click);
             // 
             // BtnExit
             // 
@@ -73,13 +75,15 @@
             this.BtnExit.TabIndex = 3;
             this.BtnExit.Text = "Exit";
             this.BtnExit.UseVisualStyleBackColor = true;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(336, 134);
+            this.pictureBox1.Location = new System.Drawing.Point(351, 73);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(217, 155);
+            this.pictureBox1.Size = new System.Drawing.Size(400, 300);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -94,7 +98,7 @@
             this.Controls.Add(this.BtnViewQuotes);
             this.Controls.Add(this.BtnAddNewForm);
             this.Name = "MainMenu";
-            this.Text = "Form1";
+            this.Text = "Main Menu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
