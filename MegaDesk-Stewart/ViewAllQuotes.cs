@@ -23,7 +23,7 @@ namespace MegaDesk_Stewart
         {
             this.mainMenu.Show();
         }
-
+ 
         private void button1_Click(object sender, EventArgs e)
         {
             this.mainMenu.Show();
