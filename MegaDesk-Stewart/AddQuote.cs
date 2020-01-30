@@ -12,6 +12,7 @@ namespace MegaDesk_Stewart
 {
     public partial class AddQuote : Form
     {
+// a comment from Harmony
         MainMenu mainMenu;
         public AddQuote(MainMenu mainMenu)
         {
