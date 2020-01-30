@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,16 +21,21 @@ namespace MegaDesk_Stewart
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.mainMenu.Show();
-            this.Close();
-        }
-
         private void SearchQuotes_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.mainMenu.Show();
         }
+
+        //Method for when a surface material is selected in the combo box
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void close_ButtonClicked(object sender, EventArgs e)
+        {
+            this.mainMenu.Show();
+            this.Close();
+        }
     }
 }
-

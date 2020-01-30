@@ -39,6 +39,7 @@
             // 
             // BtnAddNewForm
             // 
+            this.BtnAddNewForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAddNewForm.Location = new System.Drawing.Point(38, 38);
             this.BtnAddNewForm.Name = "BtnAddNewForm";
             this.BtnAddNewForm.Size = new System.Drawing.Size(258, 90);
@@ -49,6 +50,7 @@
             // 
             // BtnViewQuotes
             // 
+            this.BtnViewQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnViewQuotes.Location = new System.Drawing.Point(38, 134);
             this.BtnViewQuotes.Name = "BtnViewQuotes";
             this.BtnViewQuotes.Size = new System.Drawing.Size(258, 90);
@@ -59,6 +61,7 @@
             // 
             // BtnSearchQuotes
             // 
+            this.BtnSearchQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSearchQuotes.Location = new System.Drawing.Point(38, 230);
             this.BtnSearchQuotes.Name = "BtnSearchQuotes";
             this.BtnSearchQuotes.Size = new System.Drawing.Size(258, 90);
@@ -69,6 +72,7 @@
             // 
             // BtnExit
             // 
+            this.BtnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnExit.Location = new System.Drawing.Point(38, 326);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(258, 90);
