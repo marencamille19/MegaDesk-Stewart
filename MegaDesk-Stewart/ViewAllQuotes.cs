@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,11 +24,28 @@ namespace MegaDesk_Stewart
         {
             this.mainMenu.Show();
         }
- 
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.mainMenu.Show();
             this.Close();
+        }
+
+        public class fillDataGridView
+        {
+            public string CustomerName { get; set; }
+            public DateTime QuoteDate { get; set; }
+            public Desk.DesktopMaterial Material { get; set; }
+            public int RushDays { get; set; }
+            public int Total { get; set; }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Need to figure out how to make input = the quotes.json file I created
+            //var input = ;
+            //var result = JsonConvert.DeserializeObject<List<fillDataGridView>>(input);
+            //dataGridView1.DataSource = result;
         }
     }
 }
