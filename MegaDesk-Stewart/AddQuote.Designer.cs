@@ -223,6 +223,7 @@
             this.btnAddQuote.TabIndex = 12;
             this.btnAddQuote.Text = "Calculate Quote";
             this.btnAddQuote.UseVisualStyleBackColor = true;
+            this.btnAddQuote.Click += new System.EventHandler(this.btnAddQuote_Click);
             // 
             // quotePrice
             // 

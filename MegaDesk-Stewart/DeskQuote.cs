@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MegaDesk_Stewart
 {
-    public class DeskQuoteLDesk
+    public class DeskQuote
     {
         public DateTime QuoteDate;
         public string CustomerName { get; set; }
@@ -23,7 +23,7 @@ namespace MegaDesk_Stewart
             Desk.Depth = depth;
             Desk.NumDrawers = drawers;
             RushDays = rushOrder;
-            
+            Total = 0;
             int Area = Desk.Width * Desk.Depth;
             return Total;
         }
