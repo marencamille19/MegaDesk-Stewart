@@ -16,6 +16,8 @@ namespace MegaDesk_Stewart
     {
 // a comment from Harmony
         MainMenu mainMenu;
+        DeskQuote userQuote = new DeskQuote();
+
         public AddQuote(MainMenu mainMenu)
         {
             InitializeComponent();
@@ -54,7 +56,6 @@ namespace MegaDesk_Stewart
             userDesk.Depth = (int)(depth.Value);
             userDesk.NumDrawers = (int)(numDrawers.Value);
             userDesk.Material = (Desk.DesktopMaterial)desktopMaterial.SelectedIndex;
-            DeskQuote userQuote = new DeskQuote();
             userQuote.CustomerName = customerName.Text;
             userQuote.Shipping = (DeskQuote.RushOrder)shipping.SelectedValue;
             userQuote.Desk = userDesk;
@@ -62,6 +63,8 @@ namespace MegaDesk_Stewart
             userQuote.Total();
             quotePrice.Text = "Quote: $" + userQuote.FinalPrice.ToString();
             var total = userQuote.FinalPrice;
+
+
 
             //Write code to add a quote to the quotes.json file
             var quotesFile = @"quotes.json";
@@ -72,10 +75,6 @@ namespace MegaDesk_Stewart
                 var list = JsonConvert.DeserializeObject<List<DeskQuote>>(quotes);
                 list.Add(new DeskQuote());
                 var convertedJson = JsonConvert.SerializeObject(list, Formatting.Indented);
-            //string quotes = reader.ReadToEnd();
-            //List<DeskQuote> deskQuotes = JsonConvert.DeserializeObject<List<DeskQuote>>(quotes);
-            //deskQuotes.Add(new DeskQuote());
-            //var convertedJson = JsonConvert.SerializeObject(deskQuotes, Formatting.Indented);
             }
         }
     }
