@@ -1,5 +1,4 @@
-﻿using Newtonsoft;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -68,7 +67,7 @@ namespace MegaDesk_Stewart
                     Drawers = d.Desk.NumDrawers,
                     SurfaceMaterial = d.Desk.Material,
                     DeliveryType = d.RushDays,
-                    QuoteAmount = d.Total.ToString("c")
+                    QuoteAmount = d.FinalPrice.ToString("c")
                 }).ToList();
             }
         }
@@ -91,7 +90,7 @@ namespace MegaDesk_Stewart
                     Drawers = d.Desk.NumDrawers,
                     SurfaceMaterial = d.Desk.Material,
                     DeliveryType = d.RushDays,
-                    QuoteAmount = d.Total
+                    FinalPrice = d.FinalPrice
                 })
                 .Where(q => q.SurfaceMaterial == desktopMaterial)
                 .ToList();

@@ -36,7 +36,6 @@
             this.depth = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.desktopMaterial = new System.Windows.Forms.ComboBox();
-            this.numDrawers = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.shipping = new System.Windows.Forms.ComboBox();
@@ -44,6 +43,7 @@
             this.quotePrice = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.numDrawers = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.width)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.depth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDrawers)).BeginInit();
@@ -151,31 +151,13 @@
             this.desktopMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.desktopMaterial.FormattingEnabled = true;
             this.desktopMaterial.Items.AddRange(new object[] {
-            "laminate",
-            "oak",
-            "pine",
-            "rosewood",
-            "veneer"});
+            ""});
             this.desktopMaterial.Location = new System.Drawing.Point(364, 231);
             this.desktopMaterial.MaxDropDownItems = 5;
             this.desktopMaterial.Name = "desktopMaterial";
             this.desktopMaterial.Size = new System.Drawing.Size(222, 37);
             this.desktopMaterial.Sorted = true;
             this.desktopMaterial.TabIndex = 7;
-            // 
-            // numDrawers
-            // 
-            this.numDrawers.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numDrawers.Location = new System.Drawing.Point(364, 189);
-            this.numDrawers.Maximum = new decimal(new int[] {
-            7,
-            0,
-            0,
-            0});
-            this.numDrawers.Name = "numDrawers";
-            this.numDrawers.Size = new System.Drawing.Size(222, 36);
-            this.numDrawers.TabIndex = 8;
-            this.numDrawers.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label5
             // 
@@ -255,11 +237,31 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // numDrawers
+            // 
+            this.numDrawers.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numDrawers.Location = new System.Drawing.Point(364, 189);
+            this.numDrawers.Maximum = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
+            this.numDrawers.Name = "numDrawers";
+            this.numDrawers.Size = new System.Drawing.Size(222, 36);
+            this.numDrawers.TabIndex = 17;
+            this.numDrawers.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numDrawers.Value = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
+            // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.numDrawers);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.quotePrice);
@@ -267,7 +269,6 @@
             this.Controls.Add(this.shipping);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.numDrawers);
             this.Controls.Add(this.desktopMaterial);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.depth);
@@ -297,7 +298,6 @@
         private System.Windows.Forms.NumericUpDown depth;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox desktopMaterial;
-        private System.Windows.Forms.NumericUpDown numDrawers;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox shipping;
@@ -305,5 +305,6 @@
         private System.Windows.Forms.TextBox quotePrice;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.NumericUpDown numDrawers;
     }
 }
