@@ -18,6 +18,7 @@ namespace MegaDesk_Stewart
         MainMenu mainMenu;
         DeskQuote userQuote = new DeskQuote();
 
+
         public AddQuote(MainMenu mainMenu)
         {
             InitializeComponent();
@@ -56,7 +57,9 @@ namespace MegaDesk_Stewart
             userDesk.Depth = (int)(depth.Value);
             userDesk.NumDrawers = (int)(numDrawers.Value);
             userDesk.Material = (Desk.DesktopMaterial)desktopMaterial.SelectedIndex;
+            DeskQuote userQuote = new DeskQuote(); 
             userQuote.CustomerName = customerName.Text;
+            userQuote.QuoteDate = new DateTime();
             userQuote.Shipping = (DeskQuote.RushOrder)shipping.SelectedValue;
             userQuote.Desk = userDesk;
             userQuote.GetRushOrder();
@@ -68,13 +71,18 @@ namespace MegaDesk_Stewart
 
             //Write code to add a quote to the quotes.json file
             var quotesFile = @"quotes.json";
-
+            var convertedJson = " ";
             using (StreamReader reader = new StreamReader(quotesFile))
             {
                 string quotes = reader.ReadToEnd();
                 var list = JsonConvert.DeserializeObject<List<DeskQuote>>(quotes);
-                list.Add(new DeskQuote());
-                var convertedJson = JsonConvert.SerializeObject(list, Formatting.Indented);
+                list.Add(userQuote);
+                convertedJson = JsonConvert.SerializeObject(list, Formatting.Indented);         
+            }
+
+            using (StreamWriter writer = new StreamWriter(quotesFile))
+            {
+                writer.Write(convertedJson);
             }
         }
     }

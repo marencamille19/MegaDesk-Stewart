@@ -3,16 +3,90 @@
     "Desk": {
       "Width": 24,
       "Depth": 12,
-      "Drawers": 3,
-      "DesktopMaterial": 1
+      "NumDrawers": 0,
+      "Shipping": null,
+      "Material": 0
     },
     "Shipping": 1,
     "CustomerName": "Marie Sinclair",
     "QuoteDate": "2019-02-09T19:42:57.3791277-07:00",
     "RushDays": [
-      [ 60, 40, 30 ],
-      [ 70, 50, 35 ],
-      [ 80, 60, 40 ]
-    ]
+      [
+        60,
+        40,
+        30
+      ],
+      [
+        70,
+        50,
+        35
+      ],
+      [
+        80,
+        60,
+        40
+      ]
+    ],
+    "FinalPrice": 0.0
+  },
+  {
+    "Desk": {
+      "Width": 24,
+      "Depth": 12,
+      "NumDrawers": 7,
+      "Shipping": null,
+      "Material": 0
+    },
+    "Shipping": 0,
+    "CustomerName": "Joe",
+    "QuoteDate": "0001-01-01T00:00:00",
+    "RushDays": [
+      [
+        60,
+        40,
+        30
+      ],
+      [
+        70,
+        50,
+        35
+      ],
+      [
+        80,
+        60,
+        40
+      ]
+    ],
+    "FinalPrice": 810.0
+  },
+  {
+    "Desk": {
+      "Width": 24,
+      "Depth": 12,
+      "NumDrawers": 7,
+      "Shipping": null,
+      "Material": 1
+    },
+    "Shipping": 0,
+    "CustomerName": "Maren Stewart",
+    "QuoteDate": "0001-01-01T00:00:00",
+    "RushDays": [
+      [
+        60,
+        40,
+        30
+      ],
+      [
+        70,
+        50,
+        35
+      ],
+      [
+        80,
+        60,
+        40
+      ]
+    ],
+    "FinalPrice": 710.0
   }
 ]
